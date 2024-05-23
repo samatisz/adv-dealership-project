@@ -29,6 +29,8 @@ public class UserInterface {
             System.out.println("7. Get all vehicles");
             System.out.println("8. Add vehicle");
             System.out.println("9. Remove vehicle");
+            System.out.println("10. Lease a vehicle.");
+            System.out.println("11. Buy a vehicle");
             System.out.println("0. Quit");
 
             System.out.print("Enter your choice: ");
@@ -61,6 +63,12 @@ public class UserInterface {
                     break;
                 case "9":
                     processRemoveVehicleRequest();
+                    break;
+                case "10":
+                    processLeaseAVehicle();
+                    break;
+                case "11":
+                    processVehicleSale();
                     break;
                 case "0":
                     quit = true;
@@ -195,6 +203,30 @@ public class UserInterface {
         for (Vehicle vehicle : vehicles) {
             System.out.println(vehicle.toString());
         }
+    }
+
+    private void processLeaseAVehicle() {
+        System.out.println("Please enter the date in the following format (YYYYMMDD)");
+        String date = myScanner.nextLine();
+        System.out.println("Please enter the name of the customer.");
+        String customerName = myScanner.nextLine();
+        System.out.println("Please enter the email of the customer.");
+        String customerEmail = myScanner.nextLine();
+        System.out.println("Please enter the vehicle's VIN number:");
+        int vin = myScanner.nextInt();
+
+    }
+
+    private void processVehicleSale() {
+        System.out.println("Please enter the date in the following format (YYYYMMDD");
+        String date = myScanner.nextLine();
+        System.out.println("Please enter the name of the customer.");
+        String customerName = myScanner.nextLine();
+        System.out.println("Please enter the email of the customer.");
+        String customerEmail = myScanner.nextLine();
+        System.out.println("Please enter the vehicle's VIN number:");
+        int vin = myScanner.nextInt();
+
     }
 
 }
